@@ -10,3 +10,9 @@ export async function POST(request: NextRequest) {
 
   return NextResponse.json({ result }, {status: 200})
 }
+
+export async function GET(request: NextRequest) {
+  
+
+  return NextResponse.json({ result: 'HELLO FROM THE VERCEL WEB' }, {status: 200})
+}
