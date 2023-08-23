@@ -1,14 +1,10 @@
 'use client'
 import Image from 'next/image'
 import React, { useState } from 'react';
-import { GetRPSResults } from '../../lib/getRPSResult'
-
-
-
-
 
 export default function Home() {
   const [answer, setAnswer] = useState('Click a Hand to play the game')
+  
   const playGame = async (playerMove: string) => {
     
     const result = await fetch('http://localhost:3000/api/play-game', {
@@ -21,15 +17,9 @@ export default function Home() {
     const data = await result.json()
     console.log(data)
     setAnswer(data.result)
+
   } 
 
-  // const paperGame = async (playerMove: string) => {
-  //   const result = await fetch('http://localhost:3000/api/paperGame')
-  //   const data = await result.json()
-  //   console.log(data)
-  // } 
-
- 
  
   return (
     <main>
