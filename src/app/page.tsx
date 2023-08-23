@@ -7,7 +7,7 @@ export default function Home() {
   
   const playGame = async (playerMove: string) => {
     
-    const result = await fetch('http://localhost:3000/api/play-game', {
+    const result = await fetch('https://rps-game-rosy.vercel.app/api/play-game', {
       method: 'POST', // HTTP method (GET, POST, PUT, DELETE, etc.)
       headers: {
         'Content-Type': 'application/json' // Specify the content type of the data being sent
